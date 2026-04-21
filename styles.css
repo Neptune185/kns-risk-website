@@ -1,0 +1,408 @@
+/* =========================================
+   BRAND COLOR SYSTEM
+   Central place for your theme colors, cards,
+   borders, shadows, and status colors
+   ========================================= */
+:root {
+  --bg1: #140a2a;
+  --bg2: #0b1f52;
+  --text: #ffffff;
+  --muted: #c7c7d3;
+  --accent: #5b8cff;
+  --accent-2: #7a3cff;
+  --card: rgba(255, 255, 255, 0.06);
+  --border: rgba(255, 255, 255, 0.12);
+  --shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
+  --success: #7ee787;
+  --error: #ff9b9b;
+}
+
+/* Apply border-box so padding/borders are included in element width calculations */
+* {
+  box-sizing: border-box;
+}
+
+/* Smooth scrolling when clicking anchor links like #contact or #pricing */
+html {
+  scroll-behavior: smooth;
+}
+
+/* =========================================
+   GLOBAL PAGE STYLING
+   Sets overall font, text color, and branded background
+   ========================================= */
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text);
+  background: radial-gradient(circle at top left, #2b0f4e 0%, var(--bg1) 35%, var(--bg2) 100%);
+  line-height: 1.5;
+}
+
+/* Main content wrapper for width control and page padding */
+.wrap {
+  max-width: 1120px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+/* =========================================
+   HEADER / BRANDING
+   Controls the top company identity area
+   ========================================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 0 30px;
+}
+
+.brand {
+  font-size: 1.1rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+}
+
+.brand-sub {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 4px;
+}
+
+/* =========================================
+   HERO SECTION
+   Main headline area with centered messaging
+   ========================================= */
+.hero {
+  min-height: 70vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+  padding: 32px 0 48px;
+}
+
+.eyebrow {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 18px;
+  letter-spacing: 0.3px;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 5vw, 4.8rem);
+  line-height: 1.05;
+  max-width: 900px;
+}
+
+/* Secondary hero line beneath the main heading */
+.hero .subline {
+  display: block;
+  color: #9bb3ff;
+  font-size: clamp(1.25rem, 2.2vw, 1.8rem);
+  font-weight: 700;
+  margin-top: 10px;
+}
+
+/* General paragraph styling specifically within the hero */
+.hero p {
+  color: var(--muted);
+  max-width: 760px;
+  margin: 26px auto 0;
+  font-size: 1.08rem;
+}
+
+/* Credibility statement styling */
+.credibility {
+  margin-top: 14px;
+  color: #d9e4ff;
+  font-size: 0.98rem;
+  font-weight: 600;
+}
+
+/* Button row under hero section */
+.actions {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* =========================================
+   REUSABLE BUTTON STYLES
+   Used for CTAs across the site
+   ========================================= */
+.btn {
+  display: inline-block;
+  padding: 14px 24px;
+  border-radius: 999px;
+  text-decoration: none;
+  font-weight: 700;
+  border: 1px solid var(--border);
+  color: var(--text);
+  transition: 0.2s ease;
+  box-shadow: var(--shadow);
+  cursor: pointer;
+  font: inherit;
+}
+
+/* Primary CTA button style */
+.btn.primary {
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  border: none;
+}
+
+/* Secondary CTA button style */
+.btn.secondary {
+  background: transparent;
+}
+
+/* Hover effect for buttons */
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+/* Disabled button state used during form submission */
+.btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* =========================================
+   SHARED SECTION STYLING
+   Applies consistent vertical spacing
+   ========================================= */
+section {
+  padding: 56px 0;
+}
+
+h2 {
+  font-size: 2rem;
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+/* Centered muted paragraph text used in several sections */
+.muted-center {
+  color: var(--muted);
+  text-align: center;
+  max-width: 760px;
+  margin: 0 auto 28px;
+}
+
+/* =========================================
+   SERVICE PACKAGE CARDS
+   Three-column pricing layout
+   ========================================= */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 20px;
+  padding: 26px;
+  box-shadow: var(--shadow);
+  backdrop-filter: blur(6px);
+}
+
+.card h3 {
+  margin: 0 0 6px;
+  font-size: 1.3rem;
+}
+
+/* Large price text inside service cards */
+.price {
+  font-size: 2rem;
+  font-weight: 800;
+  margin: 10px 0 16px;
+}
+
+/* Shared unordered list spacing */
+ul {
+  padding-left: 18px;
+  margin: 0 0 22px;
+}
+
+/* Shared list item text styling */
+li {
+  margin-bottom: 10px;
+  color: var(--muted);
+}
+
+/* =========================================
+   HOW IT WORKS STEPS
+   Visual three-step process grid
+   ========================================= */
+.steps {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  margin-top: 26px;
+}
+
+.step {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 22px;
+  text-align: center;
+  box-shadow: var(--shadow);
+}
+
+/* Number badge used for each process step */
+.step-num {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  display: inline-grid;
+  place-items: center;
+  background: linear-gradient(135deg, var(--accent-2), var(--accent));
+  font-weight: 800;
+  margin-bottom: 14px;
+}
+
+/* =========================================
+   CONTACT / LEAD FORM CONTAINER
+   Main box surrounding the contact form
+   ========================================= */
+.contact-box {
+  max-width: 760px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+/* Paragraph styling inside contact area */
+.contact-box p {
+  color: var(--muted);
+}
+
+/* =========================================
+   FORM LAYOUT + INPUT STYLING
+   Applies to all inputs, textarea, and select
+   ========================================= */
+form {
+  display: grid;
+  gap: 14px;
+  margin-top: 18px;
+}
+
+input,
+textarea,
+select {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 1px solid var(--border);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  font: inherit;
+}
+
+/* Placeholder styling for text fields */
+input::placeholder,
+textarea::placeholder {
+  color: #a8aec5;
+}
+
+/* Remove some browser default select styling */
+select {
+  appearance: none;
+}
+
+/* Darker option text so dropdown items remain readable */
+select option {
+  color: #111827;
+}
+
+/* Textarea sizing behavior */
+textarea {
+  min-height: 130px;
+  resize: vertical;
+}
+
+/* Focus state for form controls */
+input:focus,
+textarea:focus,
+select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px rgba(91, 140, 255, 0.18);
+}
+
+/* =========================================
+   FORM STATUS MESSAGES
+   Used for success / error text after submission
+   ========================================= */
+.form-status {
+  min-height: 24px;
+  margin: 6px 0 0;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+.form-status.success {
+  color: var(--success);
+}
+
+.form-status.error {
+  color: var(--error);
+}
+
+/* Small informational note below the form */
+.small-note {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 12px;
+}
+
+/* =========================================
+   WHY CHOOSE US SECTION
+   Styled trust-building content box
+   ========================================= */
+.why-choose {
+  max-width: 860px;
+  margin: 0 auto;
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 22px;
+  padding: 28px;
+  box-shadow: var(--shadow);
+}
+
+.why-choose ul {
+  margin-top: 18px;
+}
+
+/* Footer text styling */
+footer {
+  text-align: center;
+  color: var(--muted);
+  padding: 26px 0 40px;
+  font-size: 0.95rem;
+}
+
+/* =========================================
+   RESPONSIVE LAYOUT
+   Stacks cards and steps on smaller screens
+   ========================================= */
+@media (max-width: 900px) {
+  .cards,
+  .steps {
+    grid-template-columns: 1fr;
+  }
+
+  h1 {
+    max-width: 100%;
+  }
+}

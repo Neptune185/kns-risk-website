@@ -1,299 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <!-- Basic page setup and responsive behavior -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Browser tab title -->
   <title>KNS Risk Solutions Group</title>
-  <style>
-    :root {
-      --bg1: #140a2a;
-      --bg2: #0b1f52;
-      --text: #ffffff;
-      --muted: #c7c7d3;
-      --accent: #5b8cff;
-      --accent-2: #7a3cff;
-      --card: rgba(255,255,255,0.06);
-      --border: rgba(255,255,255,0.12);
-      --shadow: 0 10px 30px rgba(0,0,0,0.35);
-    }
 
-    * {
-      box-sizing: border-box;
-    }
+  <!-- Search engine / social preview description -->
+  <meta
+    name="description"
+    content="Professional OWASP ZAP security scanning and cybersecurity risk assessment services."
+  />
 
-    body {
-      margin: 0;
-      font-family: Arial, Helvetica, sans-serif;
-      color: var(--text);
-      background: radial-gradient(circle at top left, #2b0f4e 0%, var(--bg1) 35%, var(--bg2) 100%);
-      line-height: 1.5;
-    }
-
-    .wrap {
-      max-width: 1120px;
-      margin: 0 auto;
-      padding: 24px;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 10px 0 30px;
-    }
-
-    .brand {
-      font-size: 1.1rem;
-      font-weight: 700;
-      letter-spacing: 0.3px;
-    }
-
-    .brand-sub {
-      color: var(--muted);
-      font-size: 0.92rem;
-      margin-top: 4px;
-    }
-
-    .hero {
-      min-height: 70vh;
-      display: grid;
-      place-items: center;
-      text-align: center;
-      padding: 32px 0 48px;
-    }
-
-    .eyebrow {
-      color: var(--muted);
-      font-size: 0.95rem;
-      margin-bottom: 18px;
-      letter-spacing: 0.3px;
-    }
-
-    h1 {
-      margin: 0;
-      font-size: clamp(2.4rem, 5vw, 4.8rem);
-      line-height: 1.05;
-      max-width: 900px;
-    }
-
-    .hero .subline {
-      display: block;
-      color: #9bb3ff;
-      font-size: clamp(1.25rem, 2.2vw, 1.8rem);
-      font-weight: 700;
-      margin-top: 10px;
-    }
-
-    .hero p {
-      color: var(--muted);
-      max-width: 760px;
-      margin: 26px auto 0;
-      font-size: 1.08rem;
-    }
-
-    .credibility {
-      margin-top: 14px;
-      color: #d9e4ff;
-      font-size: 0.98rem;
-      font-weight: 600;
-    }
-
-    .actions {
-      display: flex;
-      gap: 14px;
-      justify-content: center;
-      flex-wrap: wrap;
-      margin-top: 30px;
-    }
-
-    .btn {
-      display: inline-block;
-      padding: 14px 24px;
-      border-radius: 999px;
-      text-decoration: none;
-      font-weight: 700;
-      border: 1px solid var(--border);
-      color: var(--text);
-      transition: 0.2s ease;
-      box-shadow: var(--shadow);
-    }
-
-    .btn.primary {
-      background: linear-gradient(135deg, var(--accent-2), var(--accent));
-      border: none;
-    }
-
-    .btn.secondary {
-      background: transparent;
-    }
-
-    .btn:hover {
-      transform: translateY(-1px);
-    }
-
-    section {
-      padding: 56px 0;
-    }
-
-    h2 {
-      font-size: 2rem;
-      margin: 0 0 20px;
-      text-align: center;
-    }
-
-    .muted-center {
-      color: var(--muted);
-      text-align: center;
-      max-width: 760px;
-      margin: 0 auto 28px;
-    }
-
-    .cards {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 26px;
-    }
-
-    .card {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 26px;
-      box-shadow: var(--shadow);
-      backdrop-filter: blur(6px);
-    }
-
-    .card h3 {
-      margin: 0 0 6px;
-      font-size: 1.3rem;
-    }
-
-    .price {
-      font-size: 2rem;
-      font-weight: 800;
-      margin: 10px 0 16px;
-    }
-
-    ul {
-      padding-left: 18px;
-      margin: 0 0 22px;
-    }
-
-    li {
-      margin-bottom: 10px;
-      color: var(--muted);
-    }
-
-    .steps {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 20px;
-      margin-top: 26px;
-    }
-
-    .step {
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 18px;
-      padding: 22px;
-      text-align: center;
-      box-shadow: var(--shadow);
-    }
-
-    .step-num {
-      width: 42px;
-      height: 42px;
-      border-radius: 50%;
-      display: inline-grid;
-      place-items: center;
-      background: linear-gradient(135deg, var(--accent-2), var(--accent));
-      font-weight: 800;
-      margin-bottom: 14px;
-    }
-
-    .contact-box {
-      max-width: 760px;
-      margin: 0 auto;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .contact-box p {
-      color: var(--muted);
-    }
-
-    form {
-      display: grid;
-      gap: 14px;
-      margin-top: 18px;
-    }
-
-    input,
-    textarea {
-      width: 100%;
-      padding: 14px 16px;
-      border-radius: 12px;
-      border: 1px solid var(--border);
-      background: rgba(255,255,255,0.05);
-      color: var(--text);
-      font: inherit;
-    }
-
-    input::placeholder,
-    textarea::placeholder {
-      color: #a8aec5;
-    }
-
-    textarea {
-      min-height: 130px;
-      resize: vertical;
-    }
-
-    .small-note {
-      color: var(--muted);
-      font-size: 0.92rem;
-      margin-top: 12px;
-    }
-
-    .why-choose {
-      max-width: 860px;
-      margin: 0 auto;
-      background: var(--card);
-      border: 1px solid var(--border);
-      border-radius: 22px;
-      padding: 28px;
-      box-shadow: var(--shadow);
-    }
-
-    .why-choose ul {
-      margin-top: 18px;
-    }
-
-    footer {
-      text-align: center;
-      color: var(--muted);
-      padding: 26px 0 40px;
-      font-size: 0.95rem;
-    }
-
-    @media (max-width: 900px) {
-      .cards,
-      .steps {
-        grid-template-columns: 1fr;
-      }
-
-      h1 {
-        max-width: 100%;
-      }
-    }
-  </style>
+  <!-- External stylesheet for all site styling -->
+  <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <!--
+    Main site wrapper
+    Keeps content centered and applies consistent page padding
+  -->
   <div class="wrap">
+
+    <!--
+      Header / brand identity
+      Displays company name and service category
+    -->
     <header>
       <div>
         <div class="brand">KNS Risk Solutions Group</div>
@@ -301,20 +35,32 @@
       </div>
     </header>
 
+    <!--
+      Hero section
+      Primary value proposition and first call-to-action
+    -->
     <section class="hero">
       <div>
         <div class="eyebrow">Professional OWASP ZAP Security Scanning</div>
+
+        <!-- Main headline and supporting promise -->
         <h1>
           Identify Hidden Security Risks in Your Website — Before Attackers Do
           <span class="subline">Delivered in 24 Hours — Clear, Actionable Results</span>
         </h1>
+
+        <!-- Supporting copy explaining service value -->
         <p>
           We analyze your website using industry-standard security testing and expert review to uncover real vulnerabilities — not just technical noise.
         </p>
         <p>
           You’ll receive a clear, easy-to-understand report with prioritized risks and practical next steps.
         </p>
+
+        <!-- Credibility statement to reinforce trust -->
         <div class="credibility">Backed by 15+ years in IT, QA, and security-focused automation.</div>
+
+        <!-- Primary navigation actions for conversion -->
         <div class="actions">
           <a class="btn primary" href="#contact">Request Your Security Scan</a>
           <a class="btn secondary" href="#pricing">View Pricing</a>
@@ -322,12 +68,20 @@
       </div>
     </section>
 
+    <!--
+      Pricing / service packages section
+      Helps visitors choose the right scan tier
+    -->
     <section id="pricing">
       <h2>Service Packages</h2>
       <p class="muted-center">
         Choose the scan package that matches your needs. Payment can be handled after initial contact.
       </p>
+
+      <!-- Grid of service offering cards -->
       <div class="cards">
+
+        <!-- Basic package -->
         <div class="card">
           <h3>Basic Scan</h3>
           <div class="price">$49</div>
@@ -337,9 +91,15 @@
             <li>High-level risk overview</li>
             <li>Delivered within 24 hours</li>
           </ul>
-          <a class="btn primary" href="#contact">Request Basic Scan</a>
+
+          <!--
+            Pricing CTA
+            data-package is used by JavaScript to prefill the contact form
+          -->
+          <a class="btn primary request-package" href="#contact" data-package="Basic Scan">Request Basic Scan</a>
         </div>
 
+        <!-- Standard package -->
         <div class="card">
           <h3>Standard Scan</h3>
           <div class="price">$99</div>
@@ -350,9 +110,10 @@
             <li>Actionable remediation recommendations</li>
             <li>Delivered within 24 hours</li>
           </ul>
-          <a class="btn primary" href="#contact">Request Standard Scan</a>
+          <a class="btn primary request-package" href="#contact" data-package="Standard Scan">Request Standard Scan</a>
         </div>
 
+        <!-- Premium package -->
         <div class="card">
           <h3>Premium Scan</h3>
           <div class="price">$199</div>
@@ -363,14 +124,20 @@
             <li>30-minute consultation if needed</li>
             <li>Priority delivery</li>
           </ul>
-          <a class="btn primary" href="#contact">Request Premium Scan</a>
+          <a class="btn primary request-package" href="#contact" data-package="Premium Scan">Request Premium Scan</a>
         </div>
       </div>
     </section>
 
+    <!--
+      Process section
+      Explains how the engagement works from submission to report delivery
+    -->
     <section>
       <h2>How It Works</h2>
       <div class="steps">
+
+        <!-- Step 1 -->
         <div class="step">
           <div class="step-num">1</div>
           <h3>Submit Your Website</h3>
@@ -379,6 +146,7 @@
           </p>
         </div>
 
+        <!-- Step 2 -->
         <div class="step">
           <div class="step-num">2</div>
           <h3>We Analyze for Security Risks</h3>
@@ -387,6 +155,7 @@
           </p>
         </div>
 
+        <!-- Step 3 -->
         <div class="step">
           <div class="step-num">3</div>
           <h3>Receive Your Report</h3>
@@ -397,6 +166,10 @@
       </div>
     </section>
 
+    <!--
+      Trust-building section
+      Reinforces why a potential client should choose your service
+    -->
     <section>
       <h2>Why Choose Us</h2>
       <div class="why-choose">
@@ -409,6 +182,10 @@
       </div>
     </section>
 
+    <!--
+      Contact / lead capture section
+      This is the core conversion area for Website Phase 3
+    -->
     <section id="contact">
       <h2>Request Your Security Scan</h2>
       <div class="contact-box">
@@ -419,21 +196,57 @@
           No technical knowledge required. We translate security findings into real-world impact so you can make informed decisions.
         </p>
 
-        <form action="mailto:info@knsriskgroup.com" method="post" enctype="text/plain">
-          <input type="text" name="name" placeholder="Your Name" required />
-          <input type="email" name="email" placeholder="Your Email" required />
-          <input type="url" name="website" placeholder="Website URL" required />
-          <textarea name="message" placeholder="Tell us anything important about your site or goals."></textarea>
-          <button class="btn primary" type="submit">Send Request</button>
+        <!--
+          Lead capture form
+          JavaScript will submit this to /api/contact instead of mailto
+        -->
+        <form id="contact-form" novalidate>
+          <!-- Contact name -->
+          <input type="text" id="name" name="name" placeholder="Your Name" required />
+
+          <!-- Contact email -->
+          <input type="email" id="email" name="email" placeholder="Your Email" required />
+
+          <!-- Optional business/company field -->
+          <input type="text" id="company" name="company" placeholder="Company Name (Optional)" />
+
+          <!-- Target website for security scan -->
+          <input type="url" id="website" name="website" placeholder="Website URL" required />
+
+          <!-- Selected service package -->
+          <select id="service" name="service" required>
+            <option value="">Select a Service Package</option>
+            <option value="Basic Scan">Basic Scan</option>
+            <option value="Standard Scan">Standard Scan</option>
+            <option value="Premium Scan">Premium Scan</option>
+          </select>
+
+          <!-- Additional details from the lead -->
+          <textarea
+            id="message"
+            name="message"
+            placeholder="Tell us anything important about your site, business, or goals."
+          ></textarea>
+
+          <!-- Form submit button -->
+          <button class="btn primary" type="submit" id="submit-button">Send Request</button>
+
+          <!-- Live status text for success/error messaging -->
+          <p id="form-status" class="form-status" aria-live="polite"></p>
         </form>
 
+        <!-- Business contact note -->
         <div class="small-note">Business email: info@knsriskgroup.com</div>
       </div>
     </section>
 
+    <!-- Footer -->
     <footer>
       © 2026 KNS Risk Solutions Group. All rights reserved.
     </footer>
   </div>
+
+  <!-- External JavaScript for package selection and form submission -->
+  <script src="script.js"></script>
 </body>
 </html>
