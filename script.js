@@ -1,6 +1,6 @@
 /**
  * =========================================
- * KNS Risk Solutions - Lead Capture Script
+ * Paravant Risk Group - Lead Capture Script
  * -----------------------------------------
  * This script handles all frontend logic for:
  * 1. Selecting a service package from pricing cards
@@ -144,7 +144,7 @@ if (contactForm) {
     /**
      * Update UI to show submission is in progress
      */
-    setStatus("Sending your request...");
+    setStatus("Submitting your security scan request to Paravant Risk Group...");
     submitButton.disabled = true;
 
     try {
@@ -177,7 +177,7 @@ if (contactForm) {
        * - Show confirmation message
        * - Reset form fields
        */
-      setStatus("Thank you. Your request was submitted successfully.", "success");
+      setStatus("Thank you. Your request has been received by Paravant Risk Group LLC. We will contact you within 24 hours.", "success");
       contactForm.reset();
 
     } catch (error) {

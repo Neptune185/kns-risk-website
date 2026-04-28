@@ -164,9 +164,9 @@ export async function POST(request) {
       from: fromEmail,
       to: [toEmail],
       replyTo: email,
-      subject: `New Website Lead: ${service} - ${name}`,
+      subject: `New Paravant Risk Group LLC Lead: ${service} - ${name}`,
       html: `
-        <h2>New Lead Submission</h2>
+        <h2>New Paravant Risk Group LLC Lead Submission</h2>
         <p><strong>Name:</strong> ${safeName}</p>
         <p><strong>Email:</strong> ${safeEmail}</p>
         <p><strong>Company:</strong> ${safeCompany}</p>
@@ -207,17 +207,17 @@ Message: ${message || 'No additional message provided.'}
     const confirmationEmail = await resend.emails.send({
       from: fromEmail,
       to: [email],
-      subject: 'We received your security scan request',
+      subject: 'Paravant Risk Group LLC received your security scan request',
       html: `
-        <h2>Thank you for contacting KNS Risk Solutions Group</h2>
+        <h2>Thank you for contacting Paravant Risk Group LLC</h2>
         <p>Hi ${safeName},</p>
         <p>We received your request for the <strong>${safeService}</strong>.</p>
         <p>Website submitted: <strong>${safeWebsite}</strong></p>
         <p>We will review your request and contact you with next steps within 24 hours.</p>
-        <p>Regards,<br />KNS Risk Solutions Group</p>
+        <p>Regards,<br />Paravant Risk Group LLC</p>
       `,
       text: `
-Thank you for contacting KNS Risk Solutions Group
+Thank you for contacting Paravant Risk Group LLC
 
 Hi ${name},
 
@@ -227,7 +227,7 @@ Website submitted: ${website}
 We will review your request and contact you with next steps within 24 hours.
 
 Regards,
-KNS Risk Solutions Group
+Paravant Risk Group LLC
       `.trim(),
     });
 
