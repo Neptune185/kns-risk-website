@@ -1,252 +1,294 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Basic page setup and responsive behavior -->
+  <!--
+    Basic page setup and responsive behavior
+  -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
   <!-- Browser tab title -->
   <title>Paravant Risk Group LLC</title>
 
-  <!-- Search engine / social preview description -->
+  <!-- SEO / social preview -->
   <meta
     name="description"
-    content="Professional Web security scanning and cybersecurity risk assessment services."
+    content="Monthly cybersecurity monitoring and website vulnerability scanning for small businesses."
   />
 
-  <!-- External stylesheet for all site styling -->
+  <!-- External stylesheet -->
   <link rel="stylesheet" href="styles.css" />
 </head>
+
 <body>
   <!--
-    Main site wrapper
-    Keeps content centered and applies consistent page padding
+    Main wrapper for consistent layout spacing
   -->
   <div class="wrap">
 
-    <!--
-      Header / brand identity
-      Displays company name and service category
-    -->
+    <!-- ================= HEADER ================= -->
     <header>
       <div>
         <div class="brand">Paravant Risk Group LLC</div>
-        <div class="brand-sub">Cybersecurity Risk &amp; Vulnerability Assessment Services</div>
+        <div class="brand-sub">
+          Cybersecurity Risk &amp; Vulnerability Assessment Services
+        </div>
       </div>
     </header>
 
-    <!--
-      Hero section
-      Primary value proposition and first call-to-action
-    -->
+    <!-- ================= HERO SECTION ================= -->
     <section class="hero">
       <div>
-        <div class="eyebrow">Professional Web Security Scanning</div>
+        <div class="eyebrow">Monthly Web Security Monitoring</div>
 
-        <!-- Main headline and supporting promise -->
+        <!-- Main value proposition -->
         <h1>
-          Identify Hidden Security Risks in Your Website — Before Attackers Do
-          <span class="subline">Delivered in 24 Hours — Clear, Actionable Results</span>
+          Keep Watch Over Your Website Security — Every Month
+          <span class="subline">
+            Start with Your First Report, Continue or Cancel Anytime
+          </span>
         </h1>
 
-        <!-- Supporting copy explaining service value -->
+        <!-- Supporting messaging -->
         <p>
-          We analyze your website using industry-standard security testing and expert review to uncover real vulnerabilities — not just technical noise.
-        </p>
-        <p>
-          You’ll receive a clear, easy-to-understand report with prioritized risks and practical next steps.
+          We continuously monitor your website for security risks using automated scanning and expert analysis.
         </p>
 
-        <!-- Credibility statement to reinforce trust -->
-        <div class="credibility">Backed by 15+ years in IT, QA, and security-focused automation.</div>
+        <p>
+          Start with your first report, then stay protected with ongoing monthly monitoring — or cancel anytime.
+        </p>
 
-        <!-- Primary navigation actions for conversion -->
+        <!-- Trust builder -->
+        <div class="credibility">
+          Backed by 15+ years in IT, QA, and security-focused automation.
+        </div>
+
+        <!-- Primary CTAs -->
         <div class="actions">
-          <a class="btn primary" href="#contact">Request Your Security Scan</a>
-          <a class="btn secondary" href="#pricing">View Pricing</a>
+          <a class="btn primary" href="#pricing">View Monitoring Plans</a>
+          <a class="btn secondary" href="#contact">Ask Questions First</a>
         </div>
       </div>
     </section>
 
-    <!--
-      Pricing / service packages section
-      Helps visitors choose the right scan tier
-    -->
+    <!-- ================= PRICING SECTION ================= -->
     <section id="pricing">
-      <h2>Service Packages</h2>
+      <h2>Monthly Security Monitoring Plans</h2>
+
       <p class="muted-center">
-        Choose the plan that fits your security needs. Secure payment is processed online and results are delivered within 24 hours.
+        Choose your level of protection. All plans begin with an initial report and continue with monthly monitoring.
       </p>
 
-      <!-- Grid of service offering cards -->
       <div class="cards">
 
-        <!-- Basic package -->
+        <!-- ===== BASIC PLAN ===== -->
         <div class="card">
-          <h3>Basic Scan</h3>
-          <div class="price">$49</div>
+          <h3>Basic Monitoring</h3>
+
+          <!-- Subscription pricing -->
+          <div class="price">$29<span>/month</span></div>
+
+          <!-- Plan explanation -->
+          <p class="plan-note">
+            Simple monthly monitoring for small business websites.
+          </p>
+
+          <!-- Features -->
           <ul>
-            <li>Automated security risk scan</li>
-            <li>Summary of key vulnerabilities</li>
+            <li>Monthly automated security scan</li>
+            <li>Summary-level vulnerability report</li>
             <li>High-level risk overview</li>
-            <li>Delivered within 24 hours</li>
+            <li>First report within 24 hours</li>
+            <li>Ongoing monthly status updates</li>
+            <li>Cancel anytime after first report</li>
           </ul>
 
           <!--
-            Pricing CTA
-            data-package is used by JavaScript to prefill the contact form
+            PRIMARY ACTION:
+            Stripe subscription link (replace later)
           -->
-          <a class="btn primary request-package" href="#contact" data-package="Basic Scan">Request Basic Scan</a>
+          <a class="btn primary"
+             href="https://buy.stripe.com/6oUcN7gkMaQ0gw7cvU9EI01"
+             target="_blank"
+             rel="noopener noreferrer">
+            Subscribe – $29/month
+          </a>
+
+          <!--
+            SECONDARY ACTION:
+            Leads to contact form with pre-selected package
+          -->
+          <a class="btn secondary request-package"
+             href="#contact"
+             data-package="Basic Monitoring">
+            Ask Questions First
+          </a>
         </div>
 
-        <!-- Standard package -->
+        <!-- ===== STANDARD PLAN ===== -->
         <div class="card">
-          <h3>Standard Scan</h3>
-          <div class="price">$99</div>
+          <h3>Standard Monitoring</h3>
+
+          <div class="price">$79<span>/month</span></div>
+
+          <p class="plan-note">
+            More detailed insights and actionable recommendations.
+          </p>
+
           <ul>
-            <li>Full vulnerability assessment</li>
-            <li>Detailed report with risk breakdown</li>
-            <li>Clear explanation of findings</li>
-            <li>Actionable remediation recommendations</li>
-            <li>Delivered within 24 hours</li>
+            <li>Monthly vulnerability scanning</li>
+            <li>Detailed findings report</li>
+            <li>Risk breakdown with business impact</li>
+            <li>Clear explanations of issues</li>
+            <li>Actionable remediation steps</li>
+            <li>Monthly reporting</li>
+            <li>Cancel anytime after first report</li>
           </ul>
-          <a class="btn primary request-package" href="#contact" data-package="Standard Scan">Request Standard Scan</a>
+
+          <a class="btn primary"
+             href="https://buy.stripe.com/fZu14p1pS6zK0x99jI9EI02"
+             target="_blank"
+             rel="noopener noreferrer">
+            Subscribe – $79/month
+          </a>
+
+          <a class="btn secondary request-package"
+             href="#contact"
+             data-package="Standard Monitoring">
+            Ask Questions First
+          </a>
         </div>
 
-        <!-- Premium package -->
+        <!-- ===== PREMIUM PLAN ===== -->
         <div class="card">
-          <h3>Premium Scan</h3>
-          <div class="price">$199</div>
+          <h3>Premium Monitoring</h3>
+
+          <div class="price">$149<span>/month</span></div>
+
+          <p class="plan-note">
+            Advanced monitoring with expert review and consultation.
+          </p>
+
           <ul>
-            <li>Advanced vulnerability analysis plus review</li>
-            <li>Risk prioritization so you know what matters first</li>
+            <li>Advanced vulnerability scanning</li>
+            <li>Expert-reviewed findings</li>
+            <li>Risk prioritization</li>
             <li>Step-by-step remediation guidance</li>
-            <li>30-minute consultation if needed</li>
-            <li>Priority delivery</li>
+            <li>Executive-level reporting</li>
+            <li>30-minute consultation</li>
+            <li>Cancel anytime after first report</li>
           </ul>
-          <a class="btn primary request-package" href="#contact" data-package="Premium Scan">Request Premium Scan</a>
+
+          <a class="btn primary"
+             href="https://buy.stripe.com/9B6bJ30lO9LWcfR3Zo9EI03"
+             target="_blank"
+             rel="noopener noreferrer">
+            Subscribe – $149/month
+          </a>
+
+          <a class="btn secondary request-package"
+             href="#contact"
+             data-package="Premium Monitoring">
+            Ask Questions First
+          </a>
         </div>
+
       </div>
     </section>
 
-    <!--
-      Process section
-      Explains how the engagement works from submission to report delivery
-    -->
+    <!-- ================= PROCESS SECTION ================= -->
     <section>
       <h2>How It Works</h2>
+
       <div class="steps">
 
         <!-- Step 1 -->
         <div class="step">
           <div class="step-num">1</div>
-          <h3>Submit Your Website</h3>
+          <h3>Subscribe</h3>
           <p class="muted-center">
-            Provide your website URL and select your preferred scan package.
+            Choose your monitoring plan and subscribe securely through Stripe.
           </p>
         </div>
 
         <!-- Step 2 -->
         <div class="step">
           <div class="step-num">2</div>
-          <h3>We Analyze for Security Risks</h3>
+          <h3>Submit Website</h3>
           <p class="muted-center">
-            We perform a comprehensive scan and review findings using industry-standard tools and expertise.
+            Provide your website URL during or after checkout.
           </p>
         </div>
 
         <!-- Step 3 -->
         <div class="step">
           <div class="step-num">3</div>
-          <h3>Receive Your Report</h3>
+          <h3>Receive Report</h3>
           <p class="muted-center">
-            Get a clear, easy-to-understand report outlining risks, impact, and recommended next steps.
+            Get your first security report within 24 hours.
           </p>
         </div>
+
+        <!-- Step 4 -->
+        <div class="step">
+          <div class="step-num">4</div>
+          <h3>Ongoing Monitoring</h3>
+          <p class="muted-center">
+            Receive monthly updates or cancel anytime.
+          </p>
+        </div>
+
       </div>
     </section>
 
-    <!--
-      Trust-building section
-      Reinforces why a potential client should choose your service
-    -->
-    <section>
-      <h2>Why Choose Us</h2>
-      <div class="why-choose">
-        <ul>
-          <li>We focus on real-world risk — not just automated scan output</li>
-          <li>Clear, non-technical reporting you can actually use</li>
-          <li>Fast turnaround with practical recommendations</li>
-          <li>Personalized support when needed</li>
-        </ul>
-      </div>
-    </section>
-
-    <!--
-      Contact / lead capture section
-      This is the core conversion area for Website Phase 3
-    -->
+    <!-- ================= CONTACT SECTION ================= -->
     <section id="contact">
-      <h2>Request Your Security Scan</h2>
+      <h2>Ask Questions Before Subscribing</h2>
+
       <div class="contact-box">
+
         <p>
-          Submit your website details and we’ll review your request and contact you with next steps within 24 hours.
-        </p>
-        <p>
-          No technical knowledge required. We translate security findings into real-world impact so you can make informed decisions.
+          Not sure which plan is right? Send us your details and we’ll guide you.
         </p>
 
-        <!--
-          Lead capture form
-          JavaScript will submit this to /api/contact instead of mailto
-        -->
+        <!-- Lead form -->
         <form id="contact-form" novalidate>
-          <!-- Contact name -->
-          <input type="text" id="name" name="name" placeholder="Your Name" required />
 
-          <!-- Contact email -->
-          <input type="email" id="email" name="email" placeholder="Your Email" required />
+          <input type="text" name="name" placeholder="Your Name" required />
+          <input type="email" name="email" placeholder="Your Email" required />
+          <input type="url" name="website" placeholder="Website URL" required />
 
-          <!-- Optional business/company field -->
-          <input type="text" id="company" name="company" placeholder="Company Name (Optional)" />
-
-          <!-- Target website for security scan -->
-          <input type="url" id="website" name="website" placeholder="Website URL" required />
-
-          <!-- Selected service package -->
-          <select id="service" name="service" required>
-            <option value="">Select a Service Package</option>
-            <option value="Basic Scan">Basic Scan</option>
-            <option value="Standard Scan">Standard Scan</option>
-            <option value="Premium Scan">Premium Scan</option>
+          <!-- Package selector -->
+          <select name="service" required>
+            <option value="">Select a Plan</option>
+            <option>Basic Monitoring</option>
+            <option>Standard Monitoring</option>
+            <option>Premium Monitoring</option>
           </select>
 
-          <!-- Additional details from the lead -->
-          <textarea
-            id="message"
-            name="message"
-            placeholder="Tell us anything important about your site, business, or goals."
-          ></textarea>
+          <textarea name="message"
+            placeholder="Tell us about your site or questions"></textarea>
 
-          <!-- Form submit button -->
-          <button class="btn primary" type="submit" id="submit-button">Send Request</button>
+          <button class="btn primary">Send Question</button>
 
-          <!-- Live status text for success/error messaging -->
-          <p id="form-status" class="form-status" aria-live="polite"></p>
+          <p id="form-status" class="form-status"></p>
         </form>
 
-        <!-- Business contact note -->
-        <div class="small-note">Business email: info@paravantriskgroup.com</div>
+        <div class="small-note">
+          Business email: info@paravantriskgroup.com
+        </div>
+
       </div>
     </section>
 
-    <!-- Footer -->
+    <!-- ================= FOOTER ================= -->
     <footer>
-      © 2026 Paravant Risk Group LLC. All rights reserved.
+      © 2026 Paravant Risk Group LLC
     </footer>
+
   </div>
 
-  <!-- External JavaScript for package selection and form submission -->
+  <!-- JS handles form + package prefill -->
   <script src="script.js"></script>
 </body>
 </html>
